@@ -1,5 +1,4 @@
 import React, { JSX } from "react";
-import style from "@/style/button.module.css";
 
 interface ButtonProps {
   name: string;
@@ -10,12 +9,7 @@ interface ButtonProps {
 
 function Button({ name, isDisable, size, onClick }: ButtonProps) {
   return (
-    <button
-      onClick={onClick}
-      className={`${style.styledbutton}  ${style[size]} ${
-        isDisable === "active" ? style.active : style.disable
-      }`}
-    >
+    <button onClick={onClick} className={``}>
       {name}
     </button>
   );

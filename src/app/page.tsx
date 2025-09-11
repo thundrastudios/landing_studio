@@ -1,11 +1,21 @@
 "use client";
 
 import { useMainStore } from "@/store/useMainStore";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import About from "@/ui/About";
+import Contacts from "@/ui/Contacts";
+import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
 import Main from "@/ui/Main";
+import { useEffect } from "react";
 
 export default function Home() {
   const { isWork } = useMainStore();
+  useEffect(() => {
+    AOS.init({ duration: 700, once: true, easing: "ease-out-cubic" });
+  }, []);
+
   return (
     <>
       <Header />
@@ -38,6 +48,9 @@ export default function Home() {
       ) : (
         <div>
           <Main />
+          <About />
+          <Contacts />
+          <Footer />
         </div>
       )}
     </>

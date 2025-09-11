@@ -28,7 +28,8 @@ export default function RootLayout({
       <link rel='icon' href='icon.png' type='icon/png' sizes='32x32' />
       <link rel='icon' href='icon.svg' type='icon/svg+xml' />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
+        overflow-x-hidden `}
       >
         {children}
       </body>
