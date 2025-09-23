@@ -1,28 +1,26 @@
-const users = [
-  { id: 1, name: "John Doe" },
-  { id: 2, name: "Jane Smith" },
-];
+"use serveer";
+import  from "@/serve_components/supabaseServer";
+import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-  return new Response(JSON.stringify(users), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+export async function GET() {
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("*")
+    .order("created_at", { ascending: false });
+  if (error)
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  return NextResponse.json(data);
 }
-
-export async function POST(request: Request) {
-  const body = await request.json();
-  const { name, password } = body;
-
-  const newUser = { id: Date.now(), name, password };
-  users.push(newUser);
-
-  return new Response(JSON.stringify(newUser), {
-    status: 201,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+export async function POST(req: Request) {
+  const { contact } = await req.json().catch(() => ({}));
+  if (!contact || typeof contact !== "string")
+    return NextResponse.json({ error: "error" }, { status: 400 });
+  const { data, error } = await supabase
+    .from("profiles")
+    .insert({ contact })
+    .select()
+    .single();
+  if (error)
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  return NextResponse.json(data);
 }

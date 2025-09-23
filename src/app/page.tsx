@@ -4,16 +4,17 @@ import { useMainStore } from "@/store/useMainStore";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import About from "@/ui/About";
-import Contacts from "@/ui/Contacts";
 import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
 import Main from "@/ui/Main";
 import { useEffect } from "react";
+import { Contacts } from "@/ui/Contacts";
+import { Services } from "@/ui/Services";
 
 export default function Home() {
   const { isWork } = useMainStore();
   useEffect(() => {
-    AOS.init({ duration: 700, once: true, easing: "ease-out-cubic" });
+    AOS.init({ duration: 700, once: false, easing: "ease-out-cubic" });
   }, []);
 
   return (
@@ -28,17 +29,17 @@ export default function Home() {
           <span>В разработке оффициального сайта...</span>
           <p>
             наши соц. сети: <br />
-            ТГК: <a href='https://t.me/thundrastudio'>ТГ</a>
+            ТГК: <a href="https://t.me/thundrastudio">ТГ</a>
             <br />
             Инстаграмм:{" "}
-            <a href=' https://www.instagram.com/thundra_studios?igsh=MWhvOHJla2ZqMGJi'>
+            <a href=" https://www.instagram.com/thundra_studios?igsh=MWhvOHJla2ZqMGJi">
               Инста
             </a>
             <br />
             ГитХаб:
             <a
-              href='https://github.com/thundrastudios?view_as=member
-'
+              href="https://github.com/thundrastudios?view_as=member
+"
             >
               ГитХаб
             </a>
@@ -49,6 +50,7 @@ export default function Home() {
         <div>
           <Main />
           <About />
+          <Services />
           <Contacts />
           <Footer />
         </div>

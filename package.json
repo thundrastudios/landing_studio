@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/ssr": "github:supabase/ssr",
+    "@supabase/supabase-js": "^2.57.4",
     "aos": "^2.3.4",
     "lucide-react": "^0.542.0",
     "next": "15.4.5",
     "next-intl": "^4.3.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hook-form": "^7.63.0",
+    "supabase": "^2.45.5",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
