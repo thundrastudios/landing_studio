@@ -29,17 +29,17 @@ export default function Home() {
           <span>В разработке оффициального сайта...</span>
           <p>
             наши соц. сети: <br />
-            ТГК: <a href="https://t.me/thundrastudio">ТГ</a>
+            ТГК: <a href='https://t.me/thundrastudio'>ТГ</a>
             <br />
             Инстаграмм:{" "}
-            <a href=" https://www.instagram.com/thundra_studios?igsh=MWhvOHJla2ZqMGJi">
+            <a href=' https://www.instagram.com/thundra_studios?igsh=MWhvOHJla2ZqMGJi'>
               Инста
             </a>
             <br />
             ГитХаб:
             <a
-              href="https://github.com/thundrastudios?view_as=member
-"
+              href='https://github.com/thundrastudios?view_as=member
+'
             >
               ГитХаб
             </a>
@@ -50,7 +50,6 @@ export default function Home() {
         <div>
           <Main />
           <About />
-          <Services />
           <Contacts />
           <Footer />
         </div>

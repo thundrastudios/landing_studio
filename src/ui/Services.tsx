@@ -11,7 +11,7 @@ export function Services() {
     { serviceName, serviceCount, serviceImg, serviceDescription },
   ]: IService[]) => {
     return (
-      <li>
+      <li key={serviceName}>
         <div>
           <h2>{serviceName}</h2>
           <Image src={serviceImg} alt={serviceName} />
@@ -42,7 +42,7 @@ export function Services() {
       <h1>Наши услуги</h1>
       <ul>
         {Services.map((serv) => (
-          <li>{serv.serviceName}</li>
+          <> {serv.serviceName}</>
         ))}
       </ul>
     </div>
