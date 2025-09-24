@@ -2,20 +2,15 @@
 html,
 body,
 #__next {
-  overflow-x: hidden; /* глобально запретить горизонтальный скролл */
-}
-* {
-  box-sizing: border-box;
-}
-html,
-body {
+  overflow-x: hidden;
   overflow-x: hidden;
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth; /* глобально запретить горизонтальный скролл */
 }
-html {
-  scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
 }
 @media (prefers-reduced-motion: reduce) {
   * {
