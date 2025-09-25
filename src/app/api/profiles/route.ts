@@ -1,5 +1,4 @@
-import { supabaseAdmin } from "@/app/supabase/client";
-import { PostgrestError } from "@supabase/supabase-js";
+import { supabaseAdmin } from "@/supabase/client";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 

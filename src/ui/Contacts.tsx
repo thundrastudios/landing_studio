@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 interface Iform {
@@ -6,6 +6,7 @@ interface Iform {
   contact: string;
 }
 export function Contacts() {
+  const router = useRouter();
   const { register, handleSubmit, formState, setValue, getValues } =
     useForm<Iform>({
       mode: "onChange",
@@ -13,7 +14,6 @@ export function Contacts() {
 
   const errorname = formState.errors.name?.message;
   const errorcontact = formState.errors.contact?.message;
-
   const onSubmit: SubmitHandler<Iform> = async (data) => {
     setValue("contact", "");
     setValue("name", "");
@@ -41,7 +41,7 @@ export function Contacts() {
             type='text'
             placeholder='Ведите свое имя'
             {...register("name", {
-              required: "This field is reqred",
+              required: "This field is required",
               pattern: {
                 value: /^[A-Z0-9А-Яа-яA-z]{2,20}$/i,
                 message:
@@ -61,7 +61,7 @@ export function Contacts() {
             type='text'
             placeholder='Ведите контакт для связи'
             {...register("contact", {
-              required: "This Field is reqre",
+              required: "This field is required",
               pattern: {
                 value: /^[+A-Z0-9a-z!@#&_=]{3,30}$/i,
                 message: "incorect contact",
@@ -78,6 +78,7 @@ export function Contacts() {
           <button
             type='submit'
             className='bg-green-400 p-5 rounded-3xl m-5 shadow-2xl transition-all border-2  duration-500'
+            onClick={() => router.push("/thanks")}
           >
             Отправить
           </button>

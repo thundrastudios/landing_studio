@@ -33,6 +33,29 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
         overflow-x-hidden `}
       >
+        {" "}
+        {children}
+        <Script id='vk-pixel' strategy='afterInteractive'>
+          {`
+            var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3701347", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+          `}
+        </Script>
+        {/* noscript fallback */}
+        <noscript>
+          <img
+            src='https://top-fwz1.mail.ru/counter?id=3701347;js=na'
+            style={{ position: "absolute", left: "-9999px" }}
+            alt='Top.Mail.Ru'
+          />
+        </noscript>
         <Script id='ym-tag' strategy='afterInteractive'>
           {`
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -57,7 +80,6 @@ export default function RootLayout({
             />
           </div>
         </noscript>
-        {children}
       </body>
       <Script src='https://example.com/sdk.js' strategy='afterInteractive' />
       {/* или совсем не критичные */}
