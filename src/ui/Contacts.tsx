@@ -32,7 +32,8 @@ export function Contacts() {
       <form
         data-aos='fade-up'
         onSubmit={handleSubmit(onSubmit)}
-        className='  flex flex-col  items-center text-2xl'
+        className='  flex flex-col  items-center text-2xl '
+        id='form-itcontacts'
       >
         <div className='h-20'>
           <input

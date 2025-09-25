@@ -9,6 +9,7 @@ function Main() {
       <div
         dangerouslySetInnerHTML={{
           __html: `
+          <script>
       (function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
@@ -16,7 +17,7 @@ function Main() {
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
       })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104282067', 'ym');
 
-      ym(104282067, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+      ym(104282067, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});</script>
     `,
         }}
       />
@@ -66,7 +67,7 @@ function Main() {
             </h1>
 
             <a
-              href='#'
+              href='#form-itcontacts'
               className='inline-block mt-8 md:mt-30 text-lg md:text-xl bg-gray-900/70 border-2 border-gray-600 rounded-3xl px-6 py-5 hover:bg-gray-800 transition-all duration-250 text-white '
             >
               Оставить заявку

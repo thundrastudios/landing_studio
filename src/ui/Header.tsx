@@ -22,7 +22,7 @@ const Header = () => {
           </a>
         </div>
         <a
-          href=''
+          href='#form-itcontacts'
           className='inline-block py-3  md:text-xl bg-gray-900/70 border-2 border-gray-600 rounded-3xl md:px-4 md:py-1 hover:bg-gray-800 transition-all duration-250 text-white'
         >
           Оставить заявку
