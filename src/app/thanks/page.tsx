@@ -1,7 +1,5 @@
-// app/thanks/page.tsx
 "use client";
-
-import { Link } from "lucide-react";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function ThanksPage() {
