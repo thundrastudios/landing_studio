@@ -6,30 +6,6 @@ function Main() {
       className='overflow-x-hidden transition-all duration-200'
       data-aos='zoom-in'
     >
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `
-          <script>
-      (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104282067', 'ym');
-
-      ym(104282067, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});</script>
-    `,
-        }}
-      />
-      <noscript>
-        <div>
-          <img
-            src='https://mc.yandex.ru/watch/104282067'
-            style={{ position: "absolute", left: "-9999px" }}
-            alt=''
-          />
-        </div>
-      </noscript>{" "}
       {/* глобально запрещаем по оси X */}
       <div className='relative sm:min-h-screen flex items-center justify-center px-4 md:px-8 h-100% mb-20'>
         {/* Контейнер с отступами и скруглением */}

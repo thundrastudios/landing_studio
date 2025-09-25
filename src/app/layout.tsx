@@ -33,6 +33,30 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
         overflow-x-hidden `}
       >
+        <Script id='ym-tag' strategy='afterInteractive'>
+          {`
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+  k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(104282067, "init", {
+    clickmap:true,
+    trackLinks:true,
+    accurateTrackBounce:true,
+    webvisor:true
+  });
+`}
+        </Script>
+        <noscript>
+          <div>
+            <img
+              src='https://mc.yandex.ru/watch/104282067'
+              style={{ position: "absolute", left: "-9999px" }}
+              alt=''
+            />
+          </div>
+        </noscript>
         {children}
       </body>
       <Script src='https://example.com/sdk.js' strategy='afterInteractive' />
