@@ -1,4 +1,5 @@
 import { supabaseAdmin } from "@/app/supabase/client";
+import { PostgrestError } from "@supabase/supabase-js";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -19,21 +20,28 @@ export async function POST(req: Request) {
       .single();
 
     if (error) {
-      // покажем максимум деталей
       return NextResponse.json(
         {
           error: error.message,
-          code: (error as any).code,
-          details: (error as any).details,
-          hint: (error as any).hint,
+          code: error.code,
+          details: error.details,
+          hint: error.hint,
         },
         { status: 400 }
       );
     }
 
-    return NextResponse.json({ contact: data, name: data }, { status: 201 });
-  } catch (e: any) {
-    const msg = e?.issues?.[0]?.message ?? e?.message ?? "Bad Request";
+    return NextResponse.json(
+      { contact: data.contact, name: data.name },
+      { status: 201 }
+    );
+  } catch (e: unknown) {
+    const msg =
+      e instanceof z.ZodError
+        ? e.issues[0]?.message
+        : e instanceof Error
+        ? e.message
+        : "Bad Request";
     return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

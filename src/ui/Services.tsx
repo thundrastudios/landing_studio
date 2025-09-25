@@ -1,6 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-
+type ServiceList = IService[];
 interface IService {
   serviceName: string;
   serviceCount: number;
@@ -8,18 +8,7 @@ interface IService {
   serviceDescription: string;
 }
 export function Services() {
-  const servic = ([
-    { serviceName, serviceCount, serviceImg, serviceDescription },
-  ]: IService[]) => {
-    return (
-      <div>
-        <h2>{serviceName}</h2>
-        <Image src={serviceImg} alt={serviceName} />
-        <p>{serviceDescription}</p>
-        <h2>{serviceCount}</h2>
-      </div>
-    );
-  };
+  // Removed unused servic function
 
   const Services: IService[] = [
     {
@@ -35,7 +24,6 @@ export function Services() {
       serviceDescription: "Vip1 premium ",
     },
   ];
-
   return (
     <div>
       <h1>Наши услуги</h1>

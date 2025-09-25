@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,12 +28,16 @@ export default function RootLayout({
     <html lang='ru'>
       <link rel='icon' href='icon.png' type='icon/png' sizes='32x32' />
       <link rel='icon' href='icon.svg' type='icon/svg+xml' />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
         overflow-x-hidden `}
       >
         {children}
       </body>
+      <Script src='https://example.com/sdk.js' strategy='afterInteractive' />
+      {/* или совсем не критичные */}
+      <Script src='https://example.com/extra.js' strategy='lazyOnload' />
     </html>
   );
 }
