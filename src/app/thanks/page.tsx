@@ -1,6 +1,7 @@
 // app/thanks/page.tsx
 "use client";
 
+import { Link } from "lucide-react";
 import { useEffect } from "react";
 
 export default function ThanksPage() {
@@ -22,9 +23,9 @@ export default function ThanksPage() {
       <div className='max-w-md space-y-3'>
         <h1 className='text-2xl font-semibold'>Спасибо! 🙌</h1>
         <p>Мы свяжемся с вами в течение 1 часа.</p>
-        <a href='/' className='inline-block rounded-lg px-4 py-2 border'>
+        <Link href='/' className='inline-block rounded-lg px-4 py-2 border'>
           Вернуться на главную
-        </a>
+        </Link>
       </div>
     </main>
   );
