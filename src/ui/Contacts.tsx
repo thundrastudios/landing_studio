@@ -29,6 +29,7 @@ export function Contacts() {
 
   return (
     <>
+      <h2 className='text-7xl text-center my-20'>Оставить заявку</h2>
       <form
         data-aos='fade-up'
         onSubmit={handleSubmit(onSubmit)}
