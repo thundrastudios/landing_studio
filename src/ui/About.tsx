@@ -1,4 +1,10 @@
 function About() {
+  const aboutpeum = [
+    "🚀 Быстрые сроки",
+    "🎯 Индивидуальный подход",
+    "🔒 Надежность и поддержка",
+    "💡 Современные технологии",
+  ];
   return (
     <div className='   md:p-20'>
       <h2
@@ -23,31 +29,15 @@ function About() {
         >
           Наши Преимущества:
         </h3>
-        <ul className='md:text-3xl md:px-70 '>
-          <li
-            className='py-4  border-4 border-gray-500 m-3  text-center rounded-4xl hover:bg-gray-800 transition-all duration-100'
-            data-aos='fade-up'
-          >
-            🚀 Быстрые сроки
-          </li>
-          <li
-            className='py-4  border-4 border-gray-500 m-3  text-center rounded-4xl hover:bg-gray-800 transition-all duration-100'
-            data-aos='fade-up'
-          >
-            🎯 Индивидуальный подход
-          </li>
-          <li
-            className='py-4  border-4 border-gray-500 m-3  text-center rounded-4xl hover:bg-gray-800 transition-all duration-100'
-            data-aos='fade-up'
-          >
-            🔒 Надежность и поддержка
-          </li>
-          <li
-            className='py-4  border-4 border-gray-500 m-3  text-center rounded-4xl hover:bg-gray-800 transition-all duration-100'
-            data-aos='fade-up'
-          >
-            💡 Современные технологии
-          </li>
+        <ul className='md:text-3xl md:px-70 ' data-aos='fade-up'>
+          {aboutpeum.map((e) => (
+            <li
+              className='py-4  border-4 border-gray-500 m-3  text-center rounded-4xl hover:bg-violet-600/15  hover:text-violet-600/80 transition-all duration-300'
+              key={e.valueOf()}
+            >
+              {e.toString()}
+            </li>
+          ))}
         </ul>
         <p
           className='md:text-3xl text-center md:mt-10 md:py-20 md:px-100 mt-10 px-5'

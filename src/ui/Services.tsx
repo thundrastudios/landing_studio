@@ -46,7 +46,7 @@ export function Services() {
         {Services.map((serv) => (
           <li
             key={serv.serviceName}
-            className='flex flex-col md:flex-row border-2 md:mx-10 md:px-5 rounded-4xl bg-gray-800/15  hover:bg-gray-600/35 hover:scale-110 transition-all duration-500 hover:text-violet-700 my-8 py-10 '
+            className='flex flex-col md:flex-row border-2 md:mx-10 md:px-5 rounded-4xl bg-gray-800/15  hover:bg-violet-900/10 hover:scale-110 transition-all duration-500 hover:text-violet-700 my-8 py-10 '
           >
             <div>
               <h2 className='text-4xl p-5 text-center  '>{serv.serviceName}</h2>

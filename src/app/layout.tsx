@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang='ru'>
       <link rel='icon' href='icon.png' type='icon/png' sizes='32x32' />
       <link rel='icon' href='icon.svg' type='icon/svg+xml' />
+      <link rel='shortcut icon' href='icon.png' type='image/x-icon' />
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
