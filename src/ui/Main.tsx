@@ -36,17 +36,20 @@ function Main() {
           />
 
           {/* Контент поверх */}
-          <div className='relative z-10 text-center px-6 md:px-12 lg:px-20 md:py-24 pt-20 sm:mt-60 '>
-            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight'>
+          <div className='relative z-10 text-center px-6 md:px-12 lg:px-20 md:py-24 pt-20 sm:mt-30 '>
+            <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold text-violet-700 leading-tight'>
               Thundra Studio <br />
-              <span className='text-blue-200'>Студия digital-решений</span>
+              <span className='text-violet-400/95 text-7xl'>
+                Разработаем сайт под ключ для вашего бизнеса от 5 000 ₽, за 1
+                неделю!
+              </span>
             </h1>
 
             <a
               href='#form-itcontacts'
-              className='inline-block mt-8 md:mt-30 text-lg md:text-xl bg-gray-900/70 border-2 border-gray-600 rounded-3xl px-6 py-5 hover:bg-gray-800 transition-all duration-250 text-white '
+              className='inline-block mt-8 md:mt-30 md:p-10 p-5 text-xl md:text-4xl bg-violet-800/30 border-2 border-gray-600 rounded-3xl px-6 py-5 hover:bg-violet-800/60 transition-all duration-350 text-violet-600 hover:scale-120 hover:text-slate-50'
             >
-              Оставить заявку
+              Заказать сайт!
             </a>
           </div>
         </div>

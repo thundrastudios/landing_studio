@@ -8,7 +8,7 @@ const Header = () => {
       className='flex items-center justify-between md:py-6 md:px-40 md:text-2xl py-4 '
       data-aos='zoom-out'
     >
-      <h1>ThundraStudio</h1>
+      <h1 className='text-violet-700 md:text-4xl text-2xl'>ThundraStudio</h1>
       <div className='flex items-center'>
         <div className=' flex flex-row  '>
           <a href='https://t.me/thundrastudio' className='md:px-4'>
@@ -23,7 +23,7 @@ const Header = () => {
         </div>
         <a
           href='#form-itcontacts'
-          className='inline-block py-3  md:text-xl bg-gray-900/70 border-2 border-gray-600 rounded-3xl md:px-4 md:py-1 hover:bg-gray-800 transition-all duration-250 text-white'
+          className='inline-block py-3  md:text-xl bg-violet-900/10 border-2 border-gray-600 rounded-3xl md:px-4 md:py-1 hover:bg-violet-800/60 transition-all duration-250 text-violet-600 hover:text-slate-50 '
         >
           Оставить заявку
         </a>
