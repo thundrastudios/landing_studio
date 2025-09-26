@@ -14,7 +14,7 @@ function Main() {
 
           <Image
             className=' object-cover object-center blur-sm rounded-4xl sm:px-5  '
-            src='/herobg.jpeg' // файл в /public
+            src='/herobg.webp' // файл в /public
             alt='' // фон — можно пустой alt
             fill // растянуть на весь контейнер
             priority // <- приоритетная загрузка

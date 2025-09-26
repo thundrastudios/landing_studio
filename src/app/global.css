@@ -9,9 +9,7 @@ body,
   padding: 0;
   scroll-behavior: smooth; /* глобально запретить горизонтальный скролл */
 }
-* {
-  box-sizing: border-box;
-}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
