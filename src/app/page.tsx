@@ -50,6 +50,7 @@ export default function Home() {
         <div>
           <Main />
           <About />
+          <Services />
           <Contacts />
           <Footer />
         </div>
