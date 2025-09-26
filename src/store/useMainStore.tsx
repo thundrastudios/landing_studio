@@ -4,6 +4,6 @@ type MainStore = {
   isWork: boolean;
 };
 
-export const useMainStore = create<MainStore>((set) => ({
+export const useMainStore = create<MainStore>(() => ({
   isWork: false,
 }));

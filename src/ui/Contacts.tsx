@@ -7,10 +7,9 @@ interface Iform {
 }
 export function Contacts() {
   const router = useRouter();
-  const { register, handleSubmit, formState, setValue, getValues } =
-    useForm<Iform>({
-      mode: "onChange",
-    });
+  const { register, handleSubmit, formState, setValue } = useForm<Iform>({
+    mode: "onChange",
+  });
 
   const errorname = formState.errors.name?.message;
   const errorcontact = formState.errors.contact?.message;

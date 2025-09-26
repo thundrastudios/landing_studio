@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./global.css";
 import Script from "next/script";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,10 +52,12 @@ _tmr.push({id: "3701347", type: "pageView", start: (new Date()).getTime()});
         </Script>
         {/* noscript fallback */}
         <noscript>
-          <img
+          <Image
             src='https://top-fwz1.mail.ru/counter?id=3701347;js=na'
-            style={{ position: "absolute", left: "-9999px" }}
-            alt='Top.Mail.Ru'
+            className='position-absolute left-[-9999px]'
+            alt=''
+            width={0}
+            height={0}
           />
         </noscript>
         <Script id='ym-tag' strategy='afterInteractive'>
@@ -74,10 +77,12 @@ _tmr.push({id: "3701347", type: "pageView", start: (new Date()).getTime()});
         </Script>
         <noscript>
           <div>
-            <img
+            <Image
               src='https://mc.yandex.ru/watch/104282067'
-              style={{ position: "absolute", left: "-9999px" }}
+              className='position-absolute left-[-9999px]'
               alt=''
+              width={0}
+              height={0}
             />
           </div>
         </noscript>

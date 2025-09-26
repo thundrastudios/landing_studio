@@ -1,4 +1,4 @@
-import React, { JSX } from "react";
+import React from "react";
 
 interface ButtonProps {
   name: string;
@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-function Button({ name, isDisable, size, onClick }: ButtonProps) {
+function Button({ name, onClick }: ButtonProps) {
   return (
     <button onClick={onClick} className={``}>
       {name}
