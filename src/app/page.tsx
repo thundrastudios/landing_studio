@@ -10,6 +10,7 @@ import Main from "@/ui/Main";
 import { useEffect } from "react";
 import { Contacts } from "@/ui/Contacts";
 import { Services } from "@/ui/Services";
+import Pet_project from "@/ui/Pet_project";
 
 export default function Home() {
   const { isWork } = useMainStore();
@@ -49,8 +50,11 @@ export default function Home() {
       ) : (
         <div>
           <Main />
-          <About />
+
           <Services />
+
+          <About />
+          <Pet_project />
           <Contacts />
           <Footer />
         </div>

@@ -32,7 +32,7 @@ export default function RootLayout({
       <link rel='shortcut icon' href='icon.png' type='image/x-icon' />
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-black  text-gray-200  
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  bg-slate-950  text-gray-200  
         overflow-x-hidden `}
       >
         {" "}
