@@ -16,12 +16,16 @@ function Pet_project() {
     },
   ];
   return (
-    <div className='text-center'>
-      <h2 className='text-5xl' data-aos='fade-down' aos-duration={300}>
+    <div className='text-center py-20'>
+      <h2
+        className='md:text-5xl text-3xl'
+        data-aos='fade-down'
+        aos-duration={300}
+      >
         Наши проекты:
       </h2>
       <ul
-        className='flex justify-center py-25 text-3xl'
+        className='flex justify-center md:py-25 md:text-3xl px-3 py-10 '
         data-aos='fade-left'
         aos-duration={500}
       >
@@ -30,15 +34,15 @@ function Pet_project() {
             key={proj.ProjectName}
             className='border-3 border-gray-600 rounded-4xl py-10 hover:scale-110 hover:bg-slate-900/40 transition-all duration-350 '
           >
-            <div className='py-5 px-5'>
-              <h3 className='text-4xl pb-10'>{proj.ProjectName}</h3>
+            <div className='md:py-5 md:px-5 px-1'>
+              <h3 className='md:text-4xl text-xl pb-10'>{proj.ProjectName}</h3>
               <Image
                 src={proj.ProjectImg}
                 alt={proj.ProjectName}
                 width={700}
                 height={500}
               />
-              <ul className='text-2xl pt-3 my-8'>
+              <ul className='md:text-2xl text-sm pt-3 my-8'>
                 {proj.ProjectPreum.map((preum) => (
                   <li key={preum.valueOf()} className='py-3 '>
                     {preum}

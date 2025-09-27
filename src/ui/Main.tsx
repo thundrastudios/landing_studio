@@ -1,11 +1,11 @@
 function Main() {
   return (
     <div
-      className='overflow-x-hidden transition-all duration-200  flex flex-col items-center justify-center min-h-screen px-40 rounded-3xl '
+      className='overflow-x-hidden transition-all duration-200  flex flex-col items-center justify-center min-h-screen md:px-40 rounded-3xl  '
       data-aos='zoom-in'
     >
       {/* глобально запрещаем по оси X */}
-      <div className='text-center px-6 md:px-12 lg:px-20 md:py-24 pt-20 sm:mt-30 flex-col justify-center bg-[url("/img_hero/image.png")] bg-cover  '>
+      <div className='text-center px-6 md:px-12  md:py-24 pt-20 sm:mt-30 flex-col justify-center bg-[url("/img_hero/image.png")] bg-cover mask-b-from-80%  pb-40 '>
         <span className='text-purple-600/95 md:text-7xl text-2xl'>
           Разработаем продающий сайт под ключ для вашего бизнеса от 5 000 ₽ за 1
           неделю
