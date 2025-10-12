@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         {" "}
         {children}
-        <Script>{`yaCounter104282067.reachGoal('{{Scroll Depth Threshold}}');`}</Script>
+        <Script id='yandex-metrika-reachgoal'>{`yaCounter104282067.reachGoal("{{Scroll Depth Threshold}}");`}</Script>
         {/*Google Tag Manager*/}
         <Script id='google-tag-manager' strategy='afterInteractive'>
           {`
