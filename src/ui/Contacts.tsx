@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 
@@ -28,9 +29,13 @@ export function Contacts() {
 
   return (
     <>
-      <h2 className='text-3xl md:text-5xl text-center my-20'>
-        Оставить заявку
+      <h2 className='text-3xl md:text-5xl text-center my-10'>
+        Отсавь заявку и в течение суток мы с вами свяжемся!
       </h2>
+      <h3 className='text-sm md:text-2xl text-center  mb-20 text-purple-600 mt:px-120 px-5'>
+        Также если вы оставите заявку прямо сейчас то в подарок получите
+        бесплтаный хостинг на месяц!
+      </h3>
       <form
         data-aos='fade-up'
         onSubmit={handleSubmit(onSubmit)}

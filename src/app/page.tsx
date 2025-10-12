@@ -52,7 +52,7 @@ export default function Home() {
           <Main />
 
           <Services />
-
+          <Contacts />
           <About />
           <Pet_project />
           <Contacts />
