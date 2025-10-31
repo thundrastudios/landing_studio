@@ -8,7 +8,7 @@ import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
 import Main from "@/ui/Main";
 import { useEffect } from "react";
-import { Contacts } from "@/ui/Contacts";
+import Contacts from "@/ui/Contacts";
 import { Services } from "@/ui/Services";
 import Pet_project from "@/ui/Pet_project";
 

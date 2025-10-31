@@ -24,7 +24,7 @@ export function Services() {
     },
     {
       serviceName: "Сайт под ключ",
-      serviceCount: 10000,
+      serviceCount: 15000,
       serviceImg: "/webforkeys.webp",
       serviceDescription: [
         "🏢 Полноценный сайт для бизнеса, компании или проекта.",
