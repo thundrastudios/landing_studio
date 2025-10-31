@@ -12,7 +12,7 @@ export function Services() {
   const Services: IService[] = [
     {
       serviceName: "Лендинг",
-      serviceCount: 5000,
+      serviceCount: 7000,
       serviceImg: "/landing.webp",
       serviceDescription: [
         "📌 Одностраничный сайт для презентации компании, товара или услуги.",

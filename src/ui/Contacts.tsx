@@ -1,12 +1,22 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
+import z from "zod";
+import { zfd } from "zod-form-data";
 
 interface Iform {
   name: string;
   contact: string;
 }
-export function Contacts() {
+
+export function ContactZod() {
+  const schema = zfd.formData({
+    name: zfd.text(),
+    conacts: zfd.text(),
+  });
+}
+
+export default function Contacts() {
   const router = useRouter();
   const { register, handleSubmit, formState, setValue } = useForm<Iform>({
     mode: "onChange",
